@@ -19,7 +19,7 @@ def call(method, url, body = nil)
 end
 
 uri = URI("https://api.veille.io/v1/vat/iban")
-uri.query = URI.encode_www_form('query' => 'YOUR_VALUE')
+uri.query = URI.encode_www_form('query' => 'FR7630006000011234567890189')
 response = call("GET", uri.to_s)
 
 puts JSON.pretty_generate(JSON.parse(response))

@@ -27,7 +27,7 @@ function call(string $method, string $url, ?string $body = null): string
 }
 
 $query = http_build_query([
-    'query' => 'YOUR_VALUE'
+    'query' => 'FR7630006000011234567890189'
 ]);
 $response = call('GET', 'https://api.veille.io/v1/vat/iban' . ($query ? '?' . $query : ''));
 

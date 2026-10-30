@@ -40,7 +40,7 @@ public class VatIbanExample {
     }
 
     public static void main(String[] args) throws Exception {
-        String query = "query=" + enc("YOUR_VALUE");
+        String query = "query=" + enc("FR7630006000011234567890189");
         HttpResponse<byte[]> response = call("GET", "https://api.veille.io/v1/vat/iban" + (query.isEmpty() ? "" : "?" + query), null);
         String text = new String(response.body(), StandardCharsets.UTF_8);
         System.out.println(text.length() > 2000 ? text.substring(0, 2000) : text);

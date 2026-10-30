@@ -65,7 +65,7 @@ response = requests.get(
     "https://api.veille.io/v1/vat/iban",
     headers=HEADERS,
     params={
-        "query": "YOUR_VALUE",
+        "query": "FR7630006000011234567890189",
     },
     timeout=120,
 )
@@ -96,7 +96,7 @@ type IbanValidationApi = {
 const headers = { "x-api-key": process.env.VEILLE_API_KEY!, "Content-Type": "application/json" };
 
 const params = new URLSearchParams({
-  "query": "YOUR_VALUE",
+  "query": "FR7630006000011234567890189",
 });
 
 const response = await fetch(`https://api.veille.io/v1/vat/iban?${params}`, { headers });
